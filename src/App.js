@@ -10,6 +10,7 @@ function App() {
   const [name, setName] = useState(null);
   const [surname, setSurname] = useState(null);
   const [nickname, setNickname] = useState(null);
+  const [address, setAddress] = useState("");
 
   const [show, setShow] = useState("fullname");
 
@@ -21,7 +22,7 @@ function App() {
     setCount(count - 1);
   }
 
-  function decrease10(){
+  function decrease10() {
     setCount(count - 10);
   }
 
@@ -46,11 +47,11 @@ function App() {
     setSurname("");
   };
 
-  const clearNickName = ()=>{
+  const clearNickName = () => {
     setNickname("");
-  }
+  };
 
-	const onBlur = () => {
+  const onBlur = () => {
     setCount(count + 1);
   };
 
@@ -78,11 +79,12 @@ function App() {
         {show === "nickname" && (
           <div style={{ color: "green" }}>Nickname {nickname}</div>
         )}
+        <div style={{ color: "green" }}>Address {address}</div>
       </div>
       <div className="column">
         <Button onClick={() => increase()}>Increase</Button>
         <Button onClick={decrease}>Decrease</Button>
-        <Button onClick= {decrease10}>Decrease*10</Button>
+        <Button onClick={decrease10}>Decrease*10</Button>
         <Button onClick={linkYoutube}>Link Youtube</Button>
         <Button onClick={() => increaseNumber(10)}>Increase 10</Button>
         <Button onClick={() => increaseNumber(20)}>Increase 20</Button>
@@ -91,7 +93,7 @@ function App() {
           onChange={onChangeName}
           type="text"
           placeholder="Name"
-					onBlur={onBlur}
+          onBlur={onBlur}
         />
         <input
           value={surname}
@@ -105,12 +107,16 @@ function App() {
           type="text"
           placeholder="Nicknames"
         />
+        <input
+          value={nickname}
+          onChange={(e) => setAddress(e.target.value)}
+          type="text"
+          placeholder="Address"
+        />
         <Button onClick={clearFullName}>clearFullName</Button>
         <Button onClick={clearNickName}>clearNickName</Button>
         <Button onClick={() => setShow("fullname")}>Show Full Name</Button>
         <Button onClick={() => setShow("nickname")}>Show Nickname</Button>
-
-        
       </div>
     </div>
   );
