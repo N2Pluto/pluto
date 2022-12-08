@@ -117,6 +117,7 @@ function App() {
 
         <Button onClick={clearFullName}>clearFullName</Button>
         <Button onClick={clearNickName}>clearNickName</Button>
+        {/* EMOJI */}
         <Button onClick={() => setShow("fullname")}>Show Full Name</Button>
         <Button onClick={() => setShow("nickname")}>Show Nickname</Button>
       </div>
