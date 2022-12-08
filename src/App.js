@@ -10,7 +10,6 @@ function App() {
   const [name, setName] = useState(null);
   const [surname, setSurname] = useState(null);
   const [nickname, setNickname] = useState(null);
-  const [address, setAddress] = useState("");
   const [age, setAge] = useState("");
 
   const [show, setShow] = useState("fullname");
@@ -80,7 +79,6 @@ function App() {
         {show === "nickname" && (
           <div style={{ color: "green" }}>Nickname {nickname}</div>
         )}
-        <div style={{ color: "green" }}>Address {address}</div>
         <div style={{ color: "red" }}>Age {age}</div>
       </div>
       <div className="column">
@@ -109,19 +107,12 @@ function App() {
           type="text"
           placeholder="Nicknames"
         />
-        <input
-          value={nickname}
-          onChange={(e) => setAddress(e.target.value)}
-          type="text"
-          placeholder="Address"
-          
-        />
+
         <input
           value={age}
           onChange={(e) => setAge(e.target.value)}
           type="text"
           placeholder="Age"
-          
         />
 
         <Button onClick={clearFullName}>clearFullName</Button>
