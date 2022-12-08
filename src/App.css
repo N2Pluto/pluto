@@ -1,0 +1,47 @@
+.container {
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 500px;
+  background: #fff;
+  border: 1px solid rgba(128, 128, 128, 0.542);
+  padding: 30px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-xs {
+  font-size: 14px;
+}
+
+.text-blur {
+  font-size: 14px;
+  color: blue;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.m-5 {
+  margin: 5px 0;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
